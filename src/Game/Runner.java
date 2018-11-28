@@ -2,6 +2,7 @@ package Game;
 
 import People.Person;
 import Rooms.Room;
+import Rooms.TeleportingRoom;
 import Rooms.WinningRoom;
 
 import java.util.Scanner;
@@ -28,6 +29,20 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
+
+		//Create a random teleporting room.
+		int xx = (int)(Math.random()*building.length);
+		int yy = (int)(Math.random()*building.length);
+		if (x == xx && y == yy)
+		{
+			while (x == xx && y == yy)
+			{
+				xx = (int)(Math.random()*building.length);
+				yy = (int)(Math.random()*building.length);
+			}
+		}
+		building[x][y] = new TeleportingRoom(xx, yy);
+
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
