@@ -8,13 +8,13 @@ import Rooms.WinningRoom;
 import java.util.Scanner;
 
 public class Runner {
-	
+
+	public static Room[][] building = new Room[5][5];
 
 	private static boolean gameOn = true;
 	
 	public static void main(String[] args)
 	{
-		Room[][] building = new Room[5][5];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
@@ -133,7 +133,11 @@ public class Runner {
 	{
 		gameOn = false;
 	}
-	
 
+	public static int xy()
+	{
+		return (int)(Math.random()*building.length);
+
+	}
 
 }
