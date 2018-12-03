@@ -12,6 +12,10 @@ public class TeleportingRoom extends Room
         super(x, y);
     }
 
+    /**
+     * Asks where player wishes to move to
+     * @param x the Person entering
+     */
     @Override
     public void enterRoom(Person x) {
 
@@ -20,21 +24,25 @@ public class TeleportingRoom extends Room
         x.setyLoc(this.yLoc);
         System.out.println("You entered the teleporting room! Would you like to teleport? (Choose Y/N)");
         Scanner in = new Scanner(System.in);
-        String yn = in.nextLine();
-        if (!yn.toLowerCase().trim().equals("y") || yn.toLowerCase().trim().equals("r"))
+        String go = in.nextLine();
+        if (go.toLowerCase().trim().equals("n"))
         {
-            while (!yn.toLowerCase().trim().equals("y") || yn.toLowerCase().trim().equals("r"))
-            {
-                System.out.println("Please choose C/R");
-                in = new Scanner(System.in);
-                yn = in.nextLine();
-            }
+            System.out.print("");
         }
-        if (yn.toLowerCase().trim().equals("y"))
+        if (go.toLowerCase().trim().equals("y"))
         {
             System.out.println("Where would you like to go? Enter C for a coordinate or R for random.");
             in = new Scanner(System.in);
-            String go = in.nextLine();
+            go = in.nextLine();
+            if (!go.toLowerCase().trim().equals("c") || go.toLowerCase().trim().equals("r"))
+            {
+                while (!go.toLowerCase().trim().equals("c") || go.toLowerCase().trim().equals("r"))
+                {
+                    System.out.println("Please choose C/R");
+                    in = new Scanner(System.in);
+                    go = in.nextLine();
+                }
+            }
             if (go.toLowerCase().trim().equals("r"))
             {
                 x.setxLoc(Runner.xy());

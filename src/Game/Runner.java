@@ -41,7 +41,7 @@ public class Runner {
 				yy = (int)(Math.random()*building.length);
 			}
 		}
-		building[x][y] = new TeleportingRoom(xx, yy);
+		building[xx][yy] = new TeleportingRoom(xx, yy);
 
 		 
 		 //Setup player 1 and the input scanner
