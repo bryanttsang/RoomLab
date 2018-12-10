@@ -4,6 +4,7 @@ import People.Person;
 import Rooms.Room;
 import Rooms.TeleportingRoom;
 import Rooms.WinningRoom;
+import Board.Board;
 
 import java.util.Scanner;
 
@@ -43,13 +44,16 @@ public class Runner {
 		}
 		building[xx][yy] = new TeleportingRoom(xx, yy);
 
-		 
+		Board Board = new Board(building);
+
+
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
+			Board.print();
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
 			if(validMove(move, player1, building))

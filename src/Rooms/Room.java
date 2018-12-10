@@ -32,5 +32,9 @@ public class Room {
 	{
 		occupant = null;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "u";
+	}
 }
