@@ -1,8 +1,10 @@
 package Board;
 import Rooms.Room;
+import People.Person;
 
 public class Board {
-    private Room[][] board;
+    public static Room[][] board;
+    Person location = Room.occupant;
 
     public Board(Room[][] board)
     {
@@ -20,5 +22,6 @@ public class Board {
             }
             System.out.println(row);
         }
+        
     }
 }

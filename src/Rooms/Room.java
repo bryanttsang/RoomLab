@@ -1,9 +1,10 @@
 package Rooms;
 
 import People.Person;
+import Board.Board;
 
 public class Room {
-	Person occupant;
+	public static Person occupant;
 	int xLoc,yLoc;
 	
 	public Room(int x, int y)
@@ -35,6 +36,10 @@ public class Room {
 
 	@Override
 	public String toString() {
-		return "u";
+		if (occupant.getxLoc() == Room.)
+		{
+			return "X";
+		}
+		return "R";
 	}
 }

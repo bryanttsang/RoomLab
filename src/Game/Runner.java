@@ -8,6 +8,8 @@ import Board.Board;
 
 import java.util.Scanner;
 
+import static Board.Board.board;
+
 public class Runner {
 
 	public static Room[][] building = new Room[5][5];

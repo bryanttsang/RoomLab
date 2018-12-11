@@ -61,4 +61,9 @@ public class TeleportingRoom extends Room
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "T";
+    }
 }
