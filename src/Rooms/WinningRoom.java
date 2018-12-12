@@ -5,7 +5,6 @@ import People.Person;
 
 public class WinningRoom extends Room
 {
-
 	public WinningRoom(int x, int y) {
 		super(x, y);
 
@@ -17,7 +16,6 @@ public class WinningRoom extends Room
 	 */
 	@Override
 	public void enterRoom(Person x) {
-
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
