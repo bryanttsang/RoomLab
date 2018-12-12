@@ -18,7 +18,6 @@ public class TeleportingRoom extends Room
      */
     @Override
     public void enterRoom(Person x) {
-
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
