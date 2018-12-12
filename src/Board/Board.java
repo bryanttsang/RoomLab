@@ -2,6 +2,7 @@ package Board;
 import Rooms.Room;
 
 public class Board {
+   
    Room[][] board;
 
     public Board(Room[][] board)
