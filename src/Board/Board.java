@@ -1,6 +1,5 @@
 package Board;
 import Rooms.Room;
-import People.Person;
 
 public class Board {
    Room[][] board;
@@ -21,6 +20,5 @@ public class Board {
             }
             System.out.println(row);
         }
-        
     }
 }
